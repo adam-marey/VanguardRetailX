@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import formatPrice from '@/util/PriceFormat';
 const Product = ({ name, image, price }) => {
   return (
     <div>
@@ -8,7 +9,7 @@ const Product = ({ name, image, price }) => {
         {name}
       </h2>
       <p>
-        $ {price}
+        {formatPrice(price)}
       </p>
     </div>
   );
